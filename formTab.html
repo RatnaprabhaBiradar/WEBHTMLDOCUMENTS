@@ -1,0 +1,91 @@
+<html>
+<head></head>
+<body>
+    
+        <style>
+            #p1 {
+                background-color: aqua;
+                font-size: 30px;
+                color: cornsilk;
+                font-style:italic;
+            }
+            div {
+                background-color: aqua;
+                font-size: 30px;
+                color: cornsilk;
+            }
+        </style>
+   
+
+    from Home page to index
+    <a href="index.html">
+        Return To Home Page
+    </a>
+    <!--Form tag & Working with html form-->
+    when you want to pass data to the server
+    <form action="index.html">
+        <p>Enter Name :<input type="text" id="Name" required /></p>
+        <p>Enter Password:<input type="password" id="pwd" required /></p>
+        <p>
+            Select Gender:<input type="radio" id="r1" name="gender" />Male
+            <input type="radio" id="r1" name="gender" />Feale
+        </p>
+        <p style="color:blueviolet;font-style:italic">
+            Select Hobbies: <input type="checkbox" id="c1" name="hobbies" />Listen Music
+            <input type="checkbox" id="c2" name="hobbies" />Drawing
+            <input type="checkbox" id="c3" name="hobbies" />Dancing
+        </p>
+        <p id="p1">
+            Select City:
+            <select>
+                <option>--select city</option>
+                <option>Pune</option>
+                <option>Mumbai</option>
+                <option>Delhi</option>
+                <option>Hydrabad</option>
+            </select>
+        </p>
+
+        <p>
+            <input type="datetime-local" value="date" />
+        </p>
+        <p>
+            <input type="color" value="color" />
+        </p>
+        <p>Enter Email<input type="email" value="@email" required /></p>
+        <p>Upload File: <input type="file" name="file" multiple /></p>
+        <p><input type="month" name="month" /></p>
+        <p><input type="week" name="week" /></p>
+        <p><input type="url" name="url" /></p>
+        <p><input type="text" name="text" required /></p>
+        <p>  Enter Age:<input name="number" value="number" min="10" max="88" /></p>
+        <p><input type="range" name="range" min="10" max="500" /></p>
+        <p><input type="time" name="time" /></p>
+        <p>
+            <input type="button" value="Button" />
+            <input type="submit" value="submit" />
+            <input type="reset" value="reset" />
+        </p>
+
+    </form>
+    <div>
+        <mark>This is mark Tag</mark><br />
+        <address>
+            This is my address
+            Pune
+            Maharashtra
+            india
+        </address>
+        <br />
+
+    </div>
+   
+    
+    
+
+    <video controls height="300" width="300">
+        <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" />
+    </video>
+
+</body>
+</html>

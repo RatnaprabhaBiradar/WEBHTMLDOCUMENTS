@@ -1,0 +1,25 @@
+nav {
+    background-color: gray;
+    height: 45px;
+}
+ul li a{
+    text-decoration:none;
+}
+#menu li{
+    display:inline-flex;
+}
+#menu li a{
+    margin-right:20px;
+}
+#menu{
+    list-style-type:none;
+    display:inline-flex;
+    float:right;
+}
+#banner {
+    margin-top: 3px;
+    background-image: url('color-wing-transparent-set_1284-8933.webp');
+    height: 800px;
+    width: 100%;
+    background-position: top center;
+}
