@@ -1,25 +1,121 @@
+header {
+    position: relative;
+    top:5px;
+}
+    header marquee {
+        position: relative;
+        top: -10px;
+        font-size:20px;
+    }
+
 nav {
-    background-color: gray;
+    background-color: beige;
     height: 45px;
+    /* position:fixed;fix the possion on the page even if we scrole the menue will be visible*/
+
+    position: sticky; /*when pahe is scrolled n top reaches to 0 it will fixthe position*/
+    top: 0; /*Fix menu to the top*/
+    /*bottom:0;will fix menu to the bottom*/
+    width: 100%;
+    z-index: 2; /*when we scrole it must show on top of every thing*/
 }
 ul li a{
     text-decoration:none;
 }
-#menu li{
-    display:inline-flex;
+#menu li {
+    display: inline-flex;
 }
 #menu li a{
     margin-right:20px;
 }
-#menu{
-    list-style-type:none;
-    display:inline-flex;
-    float:right;
+#menu {
+    list-style-type: none;
+    display: inline-flex;
+    float: right;
 }
 #banner {
-    margin-top: 3px;
+    position: relative;
+    top: 2px;
     background-image: url('color-wing-transparent-set_1284-8933.webp');
-    height: 800px;
+    height: 685px;
     width: 100%;
-    background-position: top center;
+    background-position: bottom;
+    padding-top:-2em;
 }
+/* static,relative,-allow element to apply margine,absulete*/
+#banner h1{
+    position:absolute;
+
+}
+.left-pannel ul li {
+    list-style: none;
+    position: relative;
+    top: 15px;
+    padding-top: 38px;
+}
+.left-pannel {
+    position: relative;
+    background: beige;
+    width: 150px;
+    top: -12px;
+    height:437px;
+    overflow-y:auto;
+
+}
+
+
+
+.main-content {
+    position: relative;
+    top: -437px;
+    margin-left: 170px;
+    width: 70%;
+   
+}
+.main-content table tr td p{
+    text-align:center;
+
+}
+table td{
+    width:30%
+}
+.footer{
+    position:relative;
+    height:67px;
+    background:#3f404a;
+    margin-top:-86px;
+   
+}
+    .footer p {
+        position: absolute;
+        top: 10px;
+        color: white;
+        
+        left: 448px;
+        
+    }
+.paragraph p {
+    position: relative;
+    text-align: left;
+    margin-left: 180px;
+    margin-right: 20px;
+    top: -387px;
+    font-size: 17px;
+}
+#Address {
+    text-align: center;
+    position: relative;
+    margin-left: 10px;
+    top: -376px;
+}
+a:hover{
+    color:white;
+   font-size:12px;
+    background:darkgray;
+    padding:8px;    
+}
+img:hover{
+    height:200px;
+    width:200px;
+}
+
