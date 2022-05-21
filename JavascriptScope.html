@@ -1,0 +1,30 @@
+<html>
+<head>
+
+</head>
+<body>
+    <script>
+        var a = 10;
+        const pi = 3.14;
+        let x = 20;
+        function f1() {
+            var x = 20;
+            const pi = 3.15;
+            //let  x= 30; can not declear Let in function if decleared globally
+            console.log("in function F1: var=" + a + "pi=" + pi + "let=" + x)
+        }
+        function f2() {
+            console.log("in function F2: var=" + a + "pi=" + pi + "let=" + x)
+        }
+        {
+            const pi = 4.11;
+            let x = 40;
+            console.log("in Block: var=" + a + "pi=" + pi + "let=" + x)
+        }
+        f1();
+        f2();
+
+        console.log("in Global: var=" + a + "pi=" + pi + "let=" + x)
+    </script>
+</body>
+</html>

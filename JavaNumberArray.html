@@ -1,0 +1,99 @@
+<html>
+<head>
+   
+</head>
+<body>
+    <div id="d1">
+
+    </div>
+    <div id="d2">
+
+    </div>
+
+    <p>Enter number:<input type="text" id="t1" /></p>
+    <p> Data : <input type="text" id="t2" /></p>
+
+    <p>
+
+        <input type="button" value="Add at last" onclick="addatlast()" />
+        <input type="button" value="Add at First" onclick="addatfirst()" />
+        <input type="button" value="Removeat last" onclick="removeatlast()" />
+        <input type="button" value="Remove at first" onclick="removeatfirst()" />
+        <input type="button" value="Sort Asending" onclick="sasending()" />
+        <input type="button" value="Sort Desinding" onclick="sdesinding()" />
+
+    </p>
+    <script>
+        var arr = [21, 45, 3, 56, 87, 12, 31];
+        var data = 0;
+        function display() {
+            data = 0;
+            data = "<ol>";
+            for (let i = 0; i < arr.length; i++)
+                data += "<li>" + arr[i] + "</li>";
+            data += "</ol>";
+            console.log(data);
+            document.getElementById("d1").innerHTML = data;
+
+        }
+        function addatfirst() {
+            arr.unshift(document.getElementById("t1").value);
+            display();
+            document.getElementById("t2").value = document.getElementById("t1").value;
+
+        }
+        function addatlast() {
+            arr.push(document.getElementById("t1").value);
+            display();
+            document.getElementById("t2").value = document.getElementById("t1").value;
+        }
+        function removeatlast() {
+            var d = arr.pop();
+            display();
+            document.getElementById("t2").value = d;
+
+        }
+        function removeatfirst() {
+            var d = arr.shift();
+            display();
+
+            document.getElementById("t2").value = d;
+
+        }/*
+            function sort1()
+            {
+                var temp;
+                for (let i = 0; i < arr.length; i++)
+                {
+                    for (j = i + 1; j < arr.length; j++)
+                    {
+
+                        if (arr[i] > arr[j]) {
+                            temp = arr[i];
+                            arr[i] = arr[j];
+                            arr[j] = temp;
+                        }
+                    }
+
+                }
+                display();
+            }*/
+        function sasending() {
+            arr.sort(function (a, b) { return (a - b) });//asending order sort
+            display();
+        }
+
+        function sdesinding() {
+            arr.sort(function (a, b) { return (b - a) });//desending order sort
+            display();
+        }
+
+
+        var result = "<p> slice from first position till third element</p>"
+        document.getElementById("d2").innerHTML = result;
+        /*const snumber = arr.slice(1,3);
+        document.getElementById("d2").innerHTML = snumber;*/
+        display();
+    </script>
+</body>
+</html>

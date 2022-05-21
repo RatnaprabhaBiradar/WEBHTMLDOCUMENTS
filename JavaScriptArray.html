@@ -1,0 +1,102 @@
+<html>
+<head>
+    <div id="d1">
+
+    </div>
+    <div id="d2">
+
+    </div>
+    <div id="cit"></div>
+</head>
+<body>
+    <p>Enter color:<input type="text" id="t1" /></p>
+   <p> Data : <input type="text" id="t2" /></p>
+
+    <p>
+
+        <input type="button" value="Add at last" onclick="addatlast()" />
+        <input type="button" value="Add at First" onclick="addatfirst()" />
+        <input type="button" value="Removeat last" onclick="removeatlast()" />
+        <input type="button" value="Remove at first" onclick="removeatfirst()" />
+
+    </p>
+    <script>
+        var color = ["red", "blue", "green", "black"];
+        var data = "";
+        function display() {
+            data = "";
+             data = "<ol>";
+            for (let i = 0; i < color.length; i++)
+                data += "<li>" + color[i] + "</li>";
+            data += "</ol>";
+            console.log(data);
+            document.getElementById("d1").innerHTML = data;
+
+        }
+        function addatfirst() {
+            color.unshift(document.getElementById("t1").value);
+            display();
+            document.getElementById("t2").value = document.getElementById("t1").value;
+
+        }
+        function addatlast() {
+            color.push(document.getElementById("t1").value);
+            display();
+            document.getElementById("t2").value = document.getElementById("t1").value;
+        }
+        function removeatlast() {
+            var d=color.pop();
+            display();
+            document.getElementById("t2").value = d;
+
+        }
+        function removeatfirst() {
+            var d=color.shift();
+            display();
+           
+            document.getElementById("t2").value =d ;
+
+        }
+        display();
+            /*
+//Array in Java Script
+        var color = ["red", "blue", "green", "black"];
+        console.log(color);
+        console.log(color.length);
+        var arr = [];
+        arr[0] = 2;
+        arr[1] = 3;
+        arr[2] = 4;
+        console.log(arr);
+        console.log(arr.length);
+        color.push("pink")//add element at the last
+        color.unshift("white")//add element at first in the list
+
+        var data = "<ol>";
+        for (let i = 0; i < color.length; i++)
+            data += "<li>" + color[i] + "</li>";
+        data += "</ol>";
+        console.log(data);
+        document.getElementById("d1").innerHTML = data;
+        //pop is used to remove the last element
+        color.pop();
+        color.shift();
+        var data = "<ol>";
+        for (let i = 0; i < color.length; i++)
+            data += "<li>" + color[i] + "</li>";
+        data += "</ol>";
+        console.log(data);
+        document.getElementById("d2").innerHTML = data;
+        //shift remove the first element
+      //  document.getElementById("d1").innerHTML = color;
+
+        var citi = ["Pune", "Mumbai", "Nashik", "Latur", "Aurangabad"];
+        var data2 = "<ul>"
+            for(let i=0;i<citi.length; i++)
+            data2+="<li>"+citi[i]+"</li>";
+        data2 +="</ul>"
+        document.getElementById("cit").innerHTML = data2;
+        */
+    </script>
+</body>
+</html>

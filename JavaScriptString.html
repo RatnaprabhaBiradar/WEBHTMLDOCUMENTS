@@ -1,0 +1,45 @@
+<html>
+<head>
+
+</head>
+<body>
+    <script>
+        var text = "Hello to all,Good Morning all";
+        console.log(text.toUpperCase());
+        console.log(text.toLowerCase());
+        let a = text.charAt(0);//gives latter at that position
+        console.log(a);
+        var text1 = "welcome";
+        var result = text.concat(text1);
+        console.log(result);
+        console.log(text.length);
+        //slice function
+       // let res1 = text.slice(4);
+        let res1 = text.slice(4, 7)
+        //print from start index till end indix
+        console.log(res1);
+        //local replace replace the first occurance
+        text = text.replace("all", "everyone");
+        console.log(text);
+        text = "Hello to all Good Morning all";
+        //replace all the occerance of a word
+        text = text.replace(/all/g,"Everyone");
+        console.log(text);
+        //substring
+        var r1 = text.substring(1, 4);
+        console.log(r1);
+        var r2 = text.substring(3);
+        console.log(r2);
+        //split only one saperator we can use
+        var str = text.split(" ", );
+        console.log(str);
+        text = "Hello to all Good Morning all";
+        var z=text.indexOf('a');
+        console.log(z);
+        var z = text.lastIndexOf('a');
+        console.log(z);
+        //trim() is used to remove space before and after the string
+        text =text.trim();
+    </script>
+</body>
+</html>

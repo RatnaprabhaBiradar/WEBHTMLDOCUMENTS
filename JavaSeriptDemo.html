@@ -1,0 +1,95 @@
+<html>
+<head>
+
+</head>
+<body>
+    
+
+    
+
+     
+      <br />
+      <p>
+          Enter a Number: <input type="text" id="n1" />
+
+      </p>
+      <p>
+          Enter a Number: <input type="text" id="n2" />
+
+      </p>
+      <p>
+          Result: <input type="text" id="n3" />
+
+      </p>
+      <p>
+          <input type="button" value="Addition" onclick="addition()" />
+          <input type="button" value="Subtract" onclick="sub()" />
+          <input type="button" value="Multiply" onclick="mul()" />
+          <input type="button" value="Division" onclick="div()" />
+      </p>
+      <script>
+          function addition() {
+              var a = document.getElementById("n1").value;
+              var b = document.getElementById("n2").value;
+              var c = parseInt(a) + parseInt(b);
+              document.getElementById("n3").value =c;
+          }
+          function sub() {
+              var a = document.getElementById("n1").value;
+              var b = document.getElementById("n2").value;
+              var c = parseInt(a) - parseInt(b);
+              document.getElementById("n3").value = c;
+          }
+          function mul() {
+              var c = parseInt(document.getElementById("n1").value) * parseInt(document.getElementById("n2").value);
+              document.getElementById("n3").value = c;
+          }
+          function div() {
+              var c = parseInt(document.getElementById("n1").value) / parseInt(document.getElementById("n2").value);
+              document.getElementById("n3").value = c;
+          }
+      </script>
+    <!--  <script>
+          var age = 18;
+          var name = "sachin";
+          var per = 78.88;
+          var isadmin = true;
+          var data = undefined;
+          //debugger;
+          var a = 10, b = 20, c;
+          c = a + b;
+          console.log("addition is : " + c);
+          if (age < 18) {
+              console.log("invalid user")
+          }
+          else {
+              console.log("valid user");
+          }
+          for (var i = 1; i <= 10; i++)
+              console.log(i);
+          function add() {
+              var a = 10, b = 20, c;
+              c = a + b;
+              console.log("Addition is : " + c)
+          }
+          function sub(n1, n2) {
+              var sub = n1 - n2;
+              console.log("substraction :" + sub)
+          }
+          function display(empid, name, salary) {
+              console.log(empid + " " + name + " " + salary + " ");
+          }
+          function subst(n1, n2) {
+              var sub = n1 - n2;
+              return sub;
+
+          }
+          add();
+          sub(40, 20);
+          display(001, "Sachin", 95614);
+          var result = subst(60, 15);
+          console.log("result : " + result);
+      </script>
+      <!--<script src="sample.js"></script>-->
+</body>
+</html>
