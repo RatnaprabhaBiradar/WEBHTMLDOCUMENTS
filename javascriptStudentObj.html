@@ -1,0 +1,35 @@
+<html>
+<head>
+
+</head>
+<body>
+    <div id="d1"></div>
+
+    <div id="d2"></div>
+
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <script>
+
+        var Student= {
+            Name: "Rahul",
+            Id: 1,
+            subject_marks: [87, 88, 75, 69, 70],
+            Totaal_marks: function () {
+                return this.subject_marks[0] + this.subject_marks[1] + this.subject_marks[2] + this.subject_marks[3] + this.subject_marks[4];
+                
+            },
+            Percent: function () {
+                var per = ((this.subject_marks[0] + this.subject_marks[1] + this.subject_marks[2] + this.subject_marks[3] + this.subject_marks[4]) * 100) / 500;
+                return "Percentage= " + per;
+            }
+        }
+        
+
+        document.getElementById("d1").innerHTML = " Total marks of " + Student.Name + " " + Student.Totaal_marks();
+        document.getElementById("d2").innerHTML = " Percentage marks of " + Student.Name + " " + Student.Percent();
+
+    </script>
+</body>
+</html>

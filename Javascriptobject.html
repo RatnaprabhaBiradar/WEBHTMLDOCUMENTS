@@ -1,0 +1,43 @@
+<html>
+<head>
+
+</head>
+<body>
+    <div id="d1"></div>
+
+    <div id="d2"></div>
+
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <script>
+
+        var Employee = {
+            First_name: "User1",
+            last_name: "Lastname",
+            age: 30,
+            display_employdata: function () {
+                return this.First_name + " " + this.last_name + " " + this.age;
+            }
+        }
+        var product = {
+            name: "Pname",
+            price: 300,
+            P_Id: 2,
+            discount_amt: function () {
+                return this.price * .10;
+            },
+            display: function () {
+                return  this.price - this.discount_amt();
+                  
+            }
+        }
+        console.log(Employee)
+        document.getElementById("d1").innerHTML = Employee.First_name + " " + Employee.last_name + " " + Employee.age;
+        document.getElementById("d2").innerHTML = Object.values(Employee);
+        document.getElementById("d3").innerHTML = JSON.stringify(product);
+        document.getElementById("d5").innerHTML = product.name + " " + " price= " + product.display();
+
+    </script>
+</body>
+</html>
