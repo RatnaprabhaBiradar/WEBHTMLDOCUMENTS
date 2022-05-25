@@ -1,0 +1,22 @@
+<html>
+<head>
+
+</head>
+<body>
+    <div id="parent">
+        <input type="button" value="parent" />
+        <div id="Child">
+            <input type="button" value="child" />
+        </div>
+    </div>
+    <script>
+        document.getElementById("parent").addEventListener("click", function () {
+            alert("inside parent");
+        }, true);
+        document.getElementById("Child").addEventListener("click", function () {
+            alert("inside child");
+        },false);
+
+    </script>
+</body>
+</html>
