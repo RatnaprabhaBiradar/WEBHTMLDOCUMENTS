@@ -1,0 +1,77 @@
+<html>
+<head>
+
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+    <div id="d7"></div>
+    <div id="d8"></div>
+    <script>
+        const Employee = {
+            age: 30,
+            fullName: function () {
+                return this.firstname + " " + this.lastname;
+            },
+            Full_Information: function (city, country) {
+                return this.firstname + " " + this.lastname + " " + city + " " + country;
+            }
+        }
+        const stud = {
+            firstname: "sachin",
+            lastname: "Das",
+            Studinfo: function () {
+                return this.firstname + " " + this.lastname;
+            }
+
+        }
+        const member = {
+            firstname: "User1",
+            lastname: "User"
+        }
+        var arr = ["Hydrabad", "India"];
+        document.getElementById("d1").innerHTML = Employee.fullName.call(member);
+        document.getElementById("d2").innerHTML = Employee.Full_Information.call(member, "Pune", "India");
+        document.getElementById("d3").innerHTML = Employee.Full_Information.apply(member, ["Mumbai", "India"]);
+        document.getElementById("d4").innerHTML = Employee.Full_Information.apply(member, arr);
+        document.getElementById("d5").innerHTML = stud.Studinfo.bind(member)();
+        var stdin1 = stud.Studinfo.bind(member);
+        document.getElementById("d6").innerHTML = stdin1();
+        //for call we need to pass each element sepreately
+        //for apply we can pass a n arry also  but in call we can not pass an array
+        //Bind function bind with other object even though the same properties are present then also it binds iwth the other object
+        const EMPArray =
+            [
+                {
+                    firstname: "Rohan",
+                    lastname: "Patil",
+                    city: "Pune"
+                },
+                {
+                    firstname: "Snehal",
+                    lastname: "Bhosale",
+                    city: "Mumbai"
+                },
+                {
+                    firstname: "Maya",
+                    lastname: "Patil",
+                    city: "Hydrabad"
+                }
+            ]
+
+        document.getElementById("d7").innerHTML = Object.values(EMPArray[0]);
+
+        var data = "<table border='1'><tr><th>First Name</th><th>Last Name</th><th>City</th></tr>";
+        for (var i = 0; i < EMPArray.length; i++) {
+            data += "<tr><td>" + EMPArray[i].firstname + "</td><td>" + EMPArray[i].lastname + "</td><td>" + EMPArray[i].city + "</td></tr>";
+        }
+        "</table>";
+        document.getElementById("d8").innerHTML = data;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+<head>
+
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <script>
+        function display(data)
+        {
+            document.getElementById("d1").innerHTML = data;
+        }
+        var promise = new Promise(function (resolve, reject) {
+            let x = 10;
+            if (x == 10) {
+                resolve("Code get executed Successfully");
+            }
+            else {
+                reject("Error in the code");
+            }
+        });
+        promise.then(function (value) {
+            display(value);
+        }, function (error) {
+            display(error);
+        });
+        var color = ["Red", "Green", "White"];
+        function displayar(data) {
+            var txt = "<ul>"
+            for (var i = 0; i < data.length; i++) {
+                txt += "<li>" + data[i] + "</li>";
+            }
+            document.getElementById("d2").innerHTML = txt;
+        }
+        function disperror(data) {
+            document.getElementById("d2").innerHTML = data;
+        }
+        var promise1 = new Promise(function (resolve, reject) {
+            if (color != null) {
+                resolve(color);
+            }
+            else {
+                reject("Error");
+            }
+        });
+       /* promise1.then(function (value) {
+            displayar(value);
+        },function (error) {
+            disperror(error);
+        });
+        */
+          promise1.then(function (value) {
+            displayar(value);
+             }).catch(function (error) {
+            disperror(error);
+          });
+         
+         
+         
+    </script>
+</body>
+</html>

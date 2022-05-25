@@ -1,0 +1,74 @@
+<html>
+<head></head>
+<body>
+    <div id="d1"></div>
+   <div id="d2"></div>
+    <script>
+        const Student =
+            [
+                {
+                    sname:"Deepak Patil",
+                    sid:1,
+                    spercent:87.4,
+                    sbranch:"Computer"
+                },
+                {
+                    sname:"Rahul Jadhav",
+                    sid:2,
+                    spercent:89.4,
+                    sbranch:"Electronics"
+                },
+                {
+                    sname:"Prajkta Pawar",
+                    sid:3,
+                    spercent:75.3,
+                    sbranch:"IT"
+                },
+                {
+                    sname:"Parth Kulkarni",
+                    sid:4,
+                    spercent:76.23,
+                    sbranch:"Computer"
+                }
+            ]
+        var data = "<table border='2'><tr><th>ID</th><th>Name</th><th>Percentage</th><th>Branch</th></tr>";
+        for (var i = 0; i < Student.length; i++)
+        {
+            data += "<tr><td>" + Student[i].sid + "</td><td>" + Student[i].sname + "</td><td>" + Student[i].spercent + "</td><td>" + Student[i].sbranch + "</td></tr>";
+        }
+        data += "</table>";
+        document.getElementById("d1").innerHTML = data;
+
+        const product =
+            [
+                {
+                    pid:1,
+                    pname: "samsung",
+                    price:45000,
+                },
+                {
+                    pid: 2,
+                    pname: "Apple",
+                    price: 85000,
+                },
+                {
+                    pid: 1,
+                    pname: "one+",
+                    price:645000,
+                },
+                {
+                    pid: 1,
+                    pname: "Mi",
+                    price: 25000,
+                },
+            ]
+        var data = "<table border='2'><tr><th>ID</th><th>Product Name</th><th>Price</th></tr>";
+        for (var i = 0; i < product.length; i++) {
+            data += "<tr><td>" + product[i].pid + "</td><td>" + product[i].pname + "</td><td>" + product[i].price + "</td></tr>";
+        }
+        data += "</table> </br>";
+        document.getElementById("d2").innerHTML = data;
+
+    </script>
+</body>
+</html>
