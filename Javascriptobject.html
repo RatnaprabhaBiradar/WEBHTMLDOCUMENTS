@@ -32,6 +32,22 @@
                   
             }
         }
+       
+         var f1 = (
+            x, y => { x * y; }
+
+        )
+        var str1 = () => "hello to all";
+        str2 = (name) => "hello" + name;
+        str3 = name => "hello" + name;
+        document.getElementById("d1").innerHTM = str3("keshav");
+        document.getElementById("d1").innerHTML = f1(4, 5);
+
+        var exy = {
+            roll: 1,
+            name: "abha",
+            disp: () => "hello" + name;
+        }
         console.log(Employee)
         document.getElementById("d1").innerHTML = Employee.First_name + " " + Employee.last_name + " " + Employee.age;
         document.getElementById("d2").innerHTML = Object.values(Employee);
