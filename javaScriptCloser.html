@@ -1,0 +1,25 @@
+<html>
+<head>
+
+</head>
+<body>
+    <input type="button" onclick="display()" value="count" />
+    <div id="d1">    </div>
+    <script>
+        //Closer function
+        
+        const result = (
+            function  () {
+                let count = 0;
+                return function () {
+                    count++;
+                    return count;
+                }
+            })();
+
+        function display() {
+            document.getElementById("d1").innerHTML = result();
+        }
+    </script>
+</body>
+</html>
